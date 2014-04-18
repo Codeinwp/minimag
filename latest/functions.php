@@ -3,16 +3,6 @@
 if ( ! isset( $content_width ) )
 	$content_width = 640; 
  
-if(!isset($minimag_options)){
-	$minimag_options = array(
-		"CMfb"=>"",
-		"CMtw"=>"",
-		"CMrss"=>"",
-		"CMbh"=>"",
-		"CMlogo"=>""
-		);
-}
- 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -21,12 +11,12 @@ if(!isset($minimag_options)){
  * support post thumbnails.
  */
 function minimag_setup() {
-	global $minimag_options;
+	
 	/**
 	 * Custom template tags for this theme.
 	 */
 	require( get_template_directory() . '/inc/template-tags.php' );
-	require( get_template_directory() . '/inc/theme-options.php' );
+	require( get_template_directory() . '/admin/functions.php' );
  
 	load_theme_textdomain( 'minimag', get_template_directory() . '/languages' );
 	/**
@@ -49,7 +39,6 @@ function minimag_setup() {
 				'bottom_nav' => 'Bottom Navigation Menu'
 			)
 		);
-	$minimag_options = get_option("minimag_theme_options");
 	/**
 	 * Enable support for Post Formats
 	 */

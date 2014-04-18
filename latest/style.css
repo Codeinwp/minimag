@@ -1,15 +1,19 @@
 /*
 Theme Name: MiniMag
-Theme URI: http://themes.codeinwp.com/themes/minimag/
-Description: MiniMag is a responsive WordPress Theme made for people who love beautiful typography.Along with the elegant design the theme is easily customizable with numerous theme options, for example you will be able to easily edit logo, menus, social profiles links and banners. You can find more details about configuration on the demo website : themes.codeinwp.com . .
-License: GNU General Public License
+Theme URI: themeisle.com
+Description: MiniMag is a responsive WordPress Theme made for people who love beautiful typography.Along with the elegant design the theme is easily customizable with numerous theme options, for example you will be able to easily edit logo, menus, social profiles links and banners. You can find more details about configuration on the demo website : minimag.codeinwp.com .
+	
+License: GNU General Public License v2
 License URI: license.txt
-Author: Codeinwp
-Author URI: http://www.codeinwp.com
-Tags: white, light, gray, blue, right-sidebar, two-columns, fixed-width, custom-menu, theme-options, featured-images, one-column, full-width-template, custom-background, editor-style,threaded-comments, translation-ready, sticky-post 
-Version: 1.0.8
-MiniMag is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+Author: codeinwp
+Author URI: Codeinwp.com
+
+Tags: white, light, right-sidebar, two-columns, fixed-width, custom-menu, theme-options, featured-images, right-sidebar
+
+Version: 1.0.4
+
 /* =Reset
+
 -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -625,6 +629,9 @@ ul { list-style: none }
     content: "";
     display: block;
     clear: both;
+}
+.no-logo {
+	float:left;
 }
 .logo {
     position: absolute;
