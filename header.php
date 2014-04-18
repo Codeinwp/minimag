@@ -1,6 +1,3 @@
-<?php
-	global $minimag_options;
-?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -26,23 +23,25 @@
 	<header id="masthead" class="site-header" role="banner">
 			<div id="header">
 				<div class="header-holder">
-					<h1 class="logo">
-                    	 
-                        <?php if ( $minimag_options['CMlogo'] != '' ):
+					<?php 
+							$CMlogo = cwp('CMlogo');
+							if(isset($CMlogo) && $CMlogo != ""):
 								
-						?>  
-                  			<a href="<?php echo get_site_url(); ?>"><img class="special" src="<?php 
-									$img =  wp_get_attachment_image_src($minimag_options['CMlogo'],array(227,65));
-										if(empty($img)){
-											echo get_template_directory_uri()."/images/conceptdesign-logo.png";
-										}else{
-											 echo $img[0];
-										}
-										?>" alt="<?php bloginfo('name'); ?>" /></a>  
-						<?php else :  ?>
-							<a href="<?php echo get_site_url(); ?>"><img class="special" src="<?php bloginfo("template_directory"); ?>/images/conceptdesign-logo.png" alt="<?php bloginfo('name'); ?>" /></a>  
-						<?php endif; ?> 
-                    </h1>
+									echo '<h1 class="logo">';
+							?>	
+									<a href="<?php echo get_site_url(); ?>"><img class="special" src="<?php echo $CMlogo; ?>" alt="<?php bloginfo('name'); ?>" /></a>	
+						<?php
+									echo '</h1>';
+								
+							else:
+							
+								echo '<div class="no-logo">';
+								echo '<h1 class="site-title"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">'.get_bloginfo( 'name' ).'</a></h1>';
+
+								echo '<h2 class="site-description"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">'.get_bloginfo( 'description' ).'</a></h2>';
+								echo '</div>';
+							endif;
+						?> 
 				<nav id="site-navigation-top" class="navigation-main top-nav" role="navigation">
                     
                     <?php wp_nav_menu( array('container' => 'div', 'container_class' => 'menu-wrapper', 'container_id' => 'top-main-superfish-wrapper','menu_class'=> 'sf-menu', 'menu_id' => 'top-nav', 'theme_location' => 'main_nav','fallback_cb' => false,'depth'=>1 ) ); ?>
@@ -66,12 +65,4 @@
 		<div class="clear" ></div>
 	</header>
 <div id="main">
-	<div class="ad-blocks">
-		<div class="ad-block">
-				<?php 
-				if(isset($minimag_options['CMbh']))
-						echo  $minimag_options['CMbh'] ;
-				?>
-		</div>
-	</div>	
  
