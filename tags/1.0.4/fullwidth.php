@@ -1,0 +1,1 @@
+<?php /*Template Name: Full Width Page*/	get_header(); ?>      <div id="two-columns">		<div id="content-full" role="main">			<div class="post">		<?php while ( have_posts() ) : the_post(); ?>			<?php get_template_part( 'content', 'page-full' ); ?>		<?php endwhile;  ?>						</div>					</div>   <?php get_footer(); ?>
