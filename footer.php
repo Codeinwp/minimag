@@ -10,7 +10,7 @@
 						</ul>
 				
 						<p class="copyr">&copy;<?php echo date("Y"); ?> <?php bloginfo('name'); ?>. 
-						<a href="http://themeisle.com/themes/minimag/?utm_source=themefooter&utm_medium=logo&utm_campaign=themefooter" target="_blank">MiniMag</a><?php _e(' powered by ','cwp'); ?><a href="http://wordpress.org/" target="_blank"><?php _e('WordPress','cwp'); ?></a>
+						<a href="http://themeisle.com/themes/minimag/?utm_source=minimag&utm_medium=link&utm_campaign=themefooter" target="_blank">MiniMag</a><?php _e(' powered by ','cwp'); ?><a href="http://wordpress.org/" target="_blank"><?php _e('WordPress','cwp'); ?></a>
 						</p>
  					<?php
 						$var_CMfb = cwp('CMfb');
