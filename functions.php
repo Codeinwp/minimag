@@ -97,7 +97,7 @@ add_action( 'wp_enqueue_scripts', 'minimag_scripts' );
 function minimag_add_editor_styles() {
     add_editor_style( 'editor-style.css' );
 }
-add_action( 'init', 'minimag_add_editor_styles' );
+add_action( 'admin_init', 'minimag_add_editor_styles' );
 
 function minimag_empty_title($title, $id) {
     if(trim($title) == '')
