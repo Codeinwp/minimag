@@ -1,5 +1,13 @@
 
 
+### 1.0.9 - 03/06/2015
+
+ Changes: 
+
+
+ * Replaced bloginfo to home_url
+
+
 ### 1.0.6 - 03/06/2015
 
  Changes: 
