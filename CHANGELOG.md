@@ -1,5 +1,17 @@
 
 
+### 1.0.6 - 03/06/2015
+
+ Changes: 
+
+
+ * fixed the editor style
+ * Merge pull request #3 from cristian-ungureanu/development
+
+fixed the editor style
+ * Update style.css
+
+
 ### 1.0.5 - 17/10/2014
 
  Changes: 
